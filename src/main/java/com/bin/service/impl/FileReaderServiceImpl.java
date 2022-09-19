@@ -1,16 +1,18 @@
-package com.bin;/*
+package com.bin.service.impl;/*
  * @author : bin
  * @description :
  */
+
+import com.bin.service.FileReaderService;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 
-public class FileRead {
-
-    public static String readTxtFile(String filePath) {
+public class FileReaderServiceImpl implements FileReaderService {
+    @Override
+    public String readTxtFile(String filePath) {
         File file = new File(filePath);
         String encoding = "utf-8";//设置编码格式
         try (InputStreamReader read = new InputStreamReader(new FileInputStream(file), encoding);
@@ -24,7 +26,7 @@ public class FileRead {
                 while ((lineTxt = bufferedReader.readLine()) != null) {
                     stringBuilder.append(lineTxt);
                 }
-                return stringBuilder.toString().replace(regex,"").replace(" ","");
+                return stringBuilder.toString().replace(regex, "").replace(" ", "");
             } else {//出现其他问题会输出并且返回null
                 System.out.println("找不到指定的文件");
             }

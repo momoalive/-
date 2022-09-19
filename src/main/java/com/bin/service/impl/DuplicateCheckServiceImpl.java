@@ -1,16 +1,17 @@
-package com.bin;/*
+package com.bin.service.impl;/*
  * @author : bin
  * @description :
  */
 
+import com.bin.service.DuplicateCheckService;
 import org.apache.commons.collections4.SetUtils;
 
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class Cos{
-
-    public static float cos(String a, String b) {
+public class DuplicateCheckServiceImpl implements DuplicateCheckService {
+    @Override
+    public float cos(String a, String b) {
         if (a == null || b == null) {
             return 0F;
         }
