@@ -12,7 +12,7 @@ public class FileRead {
 
     public static String readTxtFile(String filePath) {
         File file = new File(filePath);
-        String encoding = "utf-8";
+        String encoding = "utf-8";//设置编码格式
         try (InputStreamReader read = new InputStreamReader(new FileInputStream(file), encoding);
              BufferedReader bufferedReader = new BufferedReader(read)) {
             //判断文件是否存在
@@ -25,7 +25,7 @@ public class FileRead {
                     stringBuilder.append(lineTxt);
                 }
                 return stringBuilder.toString().replace(regex,"").replace(" ","");
-            } else {
+            } else {//出现其他问题会输出并且返回null
                 System.out.println("找不到指定的文件");
             }
         } catch (Exception e) {
