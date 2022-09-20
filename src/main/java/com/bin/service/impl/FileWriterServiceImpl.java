@@ -13,7 +13,7 @@ import java.io.IOException;
 public class FileWriterServiceImpl implements FileWriterService {
     @Override
     public void writeRepeat(String str) {
-        File txt=new File("D:\\repeat.txt");
+        File txt=new File("D:\\repeatXXXXXXXXX.txt");
         if(!txt.exists()){//如果文件不存在就创建一个
             try {
                 txt.createNewFile();

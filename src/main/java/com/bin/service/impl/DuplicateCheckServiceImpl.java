@@ -49,7 +49,6 @@ public class DuplicateCheckServiceImpl implements DuplicateCheckService {
             p2 += (i * i);
         }
         p2 = (float) Math.sqrt(p2);
-
         float p3 = 0f;
         for (int i : bVec) {
             p3 += (i * i);

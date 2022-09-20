@@ -15,7 +15,9 @@ public class TestFileWriterService {
     }
 
     @Test
+    //是否能够正常写入
     public void testWriteRepeat(){
         fileWriterService.writeRepeat("重复率为 xxx");
     }
+
 }

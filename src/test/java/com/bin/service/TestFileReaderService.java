@@ -16,7 +16,14 @@ public class TestFileReaderService {
     }
 
     @Test
+    //是否能够正常读写
     public void testReadTxtFile() {
         System.out.println(fileReaderService.readTxtFile("D:\\code\\3120005246\\src\\main\\resources\\TestDemo\\orig.txt"));
+    }
+
+    @Test
+    //文件不存在
+    public void testFileNotFount(){
+        System.out.println(fileReaderService.readTxtFile("adad"));
     }
 }
