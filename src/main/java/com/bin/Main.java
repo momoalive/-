@@ -23,6 +23,6 @@ public class Main {
         DuplicateCheckService duplicateCheckService = new DuplicateCheckServiceImpl();
         System.out.println(duplicateCheckService.cos(a,b));
         FileWriterService fileWriterService = new FileWriterServiceImpl();
-        fileWriterService.writeRepeat("文件A:"+aPlace+" 与 文件B "+bPlaace+" 相似度为 -> "+duplicateCheckService.cos(a,b));
+        fileWriterService.writeRepeat("文件A:"+aPlace+" 与 文件B "+bPlaace+" 相似度为 -> "+String.format("%.2f", duplicateCheckService.cos(a,b)));//浮点数保留两位小数,并且写入文件
     }
 }
